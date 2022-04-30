@@ -54,3 +54,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## ViewChild/ViewChildren
 
+## Content Projection
+
+## ng-template & ng-container
+
+## Basic Dependency Injection
+  ** providers **
+  useExisting: TabBsGroupComponent (sử dụng cái component có sẵn)
+  useClass: SomeClass
+  useValue: new SomeClass()
+  useFactory: (configService) => {return configService}
+  deps: [ConfigurationService]
+  multi: ... (custom)
+
+## Content Child & Content Children

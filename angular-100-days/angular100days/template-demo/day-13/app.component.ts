@@ -266,12 +266,8 @@ export class AppComponent {
   questions = {
     question1: true,
     question2: false,
-  };
+  }
 
-  counter = 1;
-  navs = ['Active', 'Link 1', 'Link 2'];
-  currentIndex = 0;
-  showTab4 = true;
   // EVENT BINDING
   handler(event: any) {
     console.log('clicked', event);

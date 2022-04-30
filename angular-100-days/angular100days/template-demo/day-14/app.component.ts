@@ -269,9 +269,8 @@ export class AppComponent {
   };
 
   counter = 1;
-  navs = ['Active', 'Link 1', 'Link 2'];
-  currentIndex = 0;
-  showTab4 = true;
+  navs = ['Active', 'Link 1', 'Link 2']
+
   // EVENT BINDING
   handler(event: any) {
     console.log('clicked', event);

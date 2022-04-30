@@ -1,0 +1,46 @@
+<app-hello name="{{ name }}"></app-hello>
+<p>
+  <input #nameInput type="text" [(ngModel)]="name">
+</p>
+
+<p>
+  <button (click)="showLast = !showLast">Toggle show last</button>
+</p>
+
+<!-- khong nam trong 1 structural directive nao moi work trong on init -->
+<!-- <div *ngIf="true">
+  <app-toggle [(checked)]="isCheck"></app-toggle>
+</div> -->
+
+<!-- toggleComponent is instance of ToggleComponent -->
+<app-toggle
+  [(checked)]="questions.question1">
+  <h1 class="header">Header 1</h1>
+  <label for="" class="question">Question 1</label>
+  <p class="content">Content 1</p>
+</app-toggle>
+
+<app-toggle
+  [(checked)]="questions.question2"
+  [canSkip]="true">
+  <h2 class="header">Header 2</h2>
+  <span>Question 2</span>
+  <ng-container ngProjectAs=".content">
+    <span>Content 2</span>
+    <button>hello</button>
+  </ng-container>
+  <button>Skip</button>
+</app-toggle>
+
+<!-- <ng-container *ngIf="showLast">
+  <app-toggle [(checked)]="isCheck"></app-toggle>
+</ng-container> -->
+
+<!-- <button #toggleButton>Toggle me</button> -->
+
+<!-- {{ toggleButton }} -->
+
+
+<p>
+  Design by: <a href="https://dribbble.com/shots/4707036-Switcher-XXXVIII" target="_blank">Oleg Frolov</a>
+</p>
