@@ -1,5 +1,5 @@
 import { Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewContainerRef } from '@angular/core';
-// import { interval } from 'rxjs';
+import { interval } from 'rxjs';
 
 import { ToggleComponent } from './toggle/toggle.component';
 

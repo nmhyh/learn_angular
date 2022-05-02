@@ -68,3 +68,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
   multi: ... (custom)
 
 ## Content Child & Content Children
+
+## Transform data with Angular Pipes
+  - DatePipe
+  - UpperCasePipe
+  - LowerCasePipe
+  
+## RxJS Concepts
