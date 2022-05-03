@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { filter, Observable, pluck, switchMap } from 'rxjs';
+import { delay, filter, Observable, pluck, switchMap } from 'rxjs';
 import { Article } from '../../model/article';
 import { ArticleService } from '../../services/article.service';
 
@@ -14,7 +14,7 @@ export class ArticleDetailComponent implements OnInit {
 
   constructor(
     private readonly route: ActivatedRoute,
-    private readonly articleService: ArticleService
+    // private readonly articleService: ArticleService
   ) { }
 
   ngOnInit(): void {
@@ -23,10 +23,14 @@ export class ArticleDetailComponent implements OnInit {
     // console.log('----------------------------');
     // console.log(this.route.snapshot.params);
     // console.log(this.route.snapshot.paramMap);
-    this.article$ = this.route.params.pipe(
-      pluck('slug'),
-      switchMap(slug => this.articleService.getArticle(slug)),
-      filter(article => !!article)
+    // this.article$ = this.route.params.pipe(
+    //   pluck('slug'),
+    //   switchMap(slug => this.articleService.getArticle(slug)),
+    //   delay(2000),
+    //   filter(article => !!article),
+    // );
+    this.article$ = this.route.data.pipe(
+      pluck('article'),
     );
   }
 
